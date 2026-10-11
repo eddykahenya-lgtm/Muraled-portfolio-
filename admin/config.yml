@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: eddykahenya-lgtm/Muraled-portfolio-
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "artwork"
+    label: "Artwork"
+    folder: "content/artwork"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Paintings"
+          - "Murals"
+          - "Portraits"
+          - "Lettering & Graphic Design"
+          - "Commercial Projects"
+      - { label: "Image", name: "image", widget: "image" }
